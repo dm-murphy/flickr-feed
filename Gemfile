@@ -33,6 +33,9 @@ gem "redis", "~> 4.0"
 # Figaro gem to set environment variables
 gem "figaro"
 
+# Flickr Ruby gem to access Flickr API
+gem 'flickr', '~> 2.0', '>= 2.0.2'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
