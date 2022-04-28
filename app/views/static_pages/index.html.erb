@@ -1,4 +1,4 @@
-<h2>Index</h2>
+<h2>Flickr Feed</h2>
 
   <%= form_with url: "/static_pages", method: "get" do |form| %>
     <%= form.label :flickr_id, "Flickr Id:" %>
@@ -7,8 +7,8 @@
   <% end %>
 
 <% if @flickr_id.present? %>
+  <h3><%= @flickr_id %></h3>
   <% @photos.each do |photo| %>
     <%= image_tag Flickr.url_b(photo) %>
   <% end %>     
 <% end %>
-
