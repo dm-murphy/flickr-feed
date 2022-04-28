@@ -1,2 +1,14 @@
 <h2>Index</h2>
 
+  <%= form_with url: "/static_pages", method: "get" do |form| %>
+    <%= form.label :flickr_id, "Flickr Id:" %>
+    <%= form.text_field :flickr_id %>
+    <%= form.submit %>
+  <% end %>
+
+<% if @flickr_id.present? %>
+  <% @photos.each do |photo| %>
+    <%= image_tag Flickr.url_b(photo) %>
+  <% end %>     
+<% end %>
+
